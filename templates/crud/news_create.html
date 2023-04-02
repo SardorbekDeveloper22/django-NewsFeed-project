@@ -1,0 +1,18 @@
+{% extends 'news/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block title %} Yangilikni qo'shish {% endblock title %}
+
+{% block content %}
+<section id="contentSection">
+    <h2 class="text-center">Yangilik qo'shish</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.media}}
+        {{ form | crispy }}
+    <button type="submit" class="btn btn-info ml-2" style="width:100%; border-radius:5px;">Yangilik qo'shish</button>
+    </form>
+    <br>    <br>    
+</section>
+{% endblock %}

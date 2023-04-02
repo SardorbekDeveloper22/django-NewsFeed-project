@@ -1,0 +1,25 @@
+{% extends 'news/base.html' %}
+{% load static %}
+{% block title %} Foydalanuvchilarni ro'yhatdan o'tkazish {% endblock title %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<section id="contentSection">
+    
+    <div class="row" style="margin: 20px 6%;">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <h1>Yangi foydalanuvchilarni ro'yhatdan o'tkazish</h1>
+            <p>Ro'yhatdan o'tish uchun quyidagi formani to'ldiring:</p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+             <form method="post">{% csrf_token %}
+             {{ user_form |crispy }}
+             <button type="submit" class="btn btn-info" style="border-radius:5px; width:100%;">Ro'yhatdan o'tish</button>
+             </form>
+        </div>
+
+    </div>
+
+
+</section>
+{% endblock content %}

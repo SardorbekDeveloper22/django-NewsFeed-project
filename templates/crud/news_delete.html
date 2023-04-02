@@ -1,0 +1,25 @@
+{% extends 'news/base.html' %}
+{% load static %}
+{% block title %} {{ news.title }} {% endblock title %}
+{% block content %}
+<section id="contentSection">
+    <br><br>
+    <div class="container">
+        <form method="post">{% csrf_token %}
+            <div class="card" style="width: 80%; text-align:center;">
+                <h2 class="text-center">Joriy yangilikni o'chirish</h2><br> 
+                
+                <div class="card-body">
+                    <h5 class="card-title">{{ news.title | truncatewords:4 }}</h5>
+                    <p class="card-text">{{ news.body | safe | truncatewords:30}}</p>
+                    <button type="submit" class="btn btn-danger ml-2" style="border-radius:5px; width:100%;">Tasdiqlayman</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+</section>
+{% endblock %}

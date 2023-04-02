@@ -1,0 +1,158 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block title %} Mahalliy xabarlar {% endblock title %}
+
+{% block content %}
+<section id="contentSection">
+    <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8">
+                <div class="container">
+            <h2>Mahalliy xabarlar</h2><br>
+            {% for news in news_list %}
+                    <div class="row">
+                        <div class="col-sm-8">
+
+                            <div class="card mb-3" style="max-width: 540px;">
+                              <div class="row g-0 m-4">
+                                <div class="col-md-4">
+                                    <a href="{{ news.get_absolute_url }}">  
+                                        <img src="{{ news.image.url }}" alt="{{ news.title }}" class="img-fluid rounded-start" width="100%">
+                                    </a>
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="card-body">
+                                    <h5 class="card-title">
+                                        <a href="{{ news.get_absolute_url }}">
+                                            {{ news.title }}
+                                        </a>
+                                    </h5>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+            {% endfor %}
+                </div>
+            {% if news_list.has_next %}
+
+            <nav aria-label="...">
+                <ul class="pagination">
+
+                    {% if news_list.has_previous %}
+                        <li class="page-item">
+                            <span class="page-link">
+                                {% comment %} <a href="?page=1">&laquo; boshi</a> {% endcomment %}
+                                <a href="?page={{ news_list.previous_page_number }}">Oldingi</a>
+                            </span>
+                        </li>
+                    {% endif %}
+
+                    {% for page in news_list.paginator.page_range %}
+                        {% if news_list.number == page %}
+                            <li class="page-item active"><a class="page-link" href="?page={{page}}">{{page}}</a></li>
+                        {% else %}
+                            <li class="page-item"><a class="page-link" href="?page={{page}}">{{page}}</a></li>
+                        {% endif %}
+                    {% endfor%}
+
+                    {% if news_list.has_next %}
+                    <li class="page-item">
+                            <a class="page-link" href="?page={{ news_list.next_page_number }}">Keyingi</a>
+                            {% comment %} <a href="?page={{ news_list.paginator.num_pages }}">Oxiri &raquo;</a> {% endcomment %}
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+            {% endif %}
+
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <aside class="right_content">
+                <div class="single_sidebar">
+                    <h2><span>So'ngi yangiliklar</span></h2>
+                    <ul class="spost_nav">
+                        {% for news in news_list %}
+                        <li>
+                            <div class="media wow fadeInDown"> <a href="{{ news.get_absolute_url }}" class="media-left"> <img src="{{ news.image.url }}" alt="" width="20px" height="20px"> </a>
+                                <div class="media-body"> <a href="{{ news.get_absolute_url }}" class="catg_title">{{ news.title }}</a>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="single_sidebar">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#category" aria-controls="home" role="tab" data-toggle="tab">Category</a></li>
+                        <li role="presentation"><a href="#video" aria-controls="profile" role="tab" data-toggle="tab">Video</a></li>
+                        <li role="presentation"><a href="#comments" aria-controls="messages" role="tab" data-toggle="tab">Comments</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="category">
+                            <ul>
+                                {% for category in categories %}
+                                <li class="cat-item"><a href="#">{{ category.name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="video">
+                            <div class="vide_area">
+                                <iframe width="100%" height="250" src="http://www.youtube.com/embed/h5QWbURNEpA?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="comments">
+                            <ul class="spost_nav">
+                                <li>
+                                    <div class="media wow fadeInDown"> <a href="single_page.html" class="media-left"> <img alt="" src="../images/post_img1.jpg"> </a>
+                                        <div class="media-body"> <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a> </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="media wow fadeInDown"> <a href="single_page.html" class="media-left"> <img alt="" src="../images/post_img2.jpg"> </a>
+                                        <div class="media-body"> <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a> </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="media wow fadeInDown"> <a href="single_page.html" class="media-left"> <img alt="" src="../images/post_img1.jpg"> </a>
+                                        <div class="media-body"> <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a> </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="media wow fadeInDown"> <a href="single_page.html" class="media-left"> <img alt="" src="../images/post_img2.jpg"> </a>
+                                        <div class="media-body"> <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a> </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="single_sidebar wow fadeInDown">
+                    <h2><span>Sponsor</span></h2>
+                    <a class="sideAdd" href="#"><img src="{% static 'images/add_img.jpg' %}" alt=""></a>
+                </div>
+                <div class="single_sidebar wow fadeInDown">
+                    <h2><span>Barcha kategoriyalar</span></h2>
+                    <select class="catgArchive">
+                        <option>Kategoriyani tanlang</option>
+                        {% for kategory in categories %}
+                        <option>{{ kategory.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="single_sidebar wow fadeInDown">
+                    <h2><span>Links</span></h2>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Rss Feed</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Life &amp; Style</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+{% endblock content %}
