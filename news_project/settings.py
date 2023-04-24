@@ -163,16 +163,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = 'home_page'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'newsfeedd22@gmail.com'
-EMAIL_HOST_PASSWORD = 'sardorbek@#$_&12A'
-AUTH_PASSWORD_RESET_TIMEOUT_DAYS = 1
-EMAIL_TIMEOUT_DAYS = 1
-DEFAULT_FROM_EMAIL = 'newsfeedd22@gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
 
 LOGIN_URL = 'login'
 
