@@ -1,4 +1,4 @@
-# NewsFeed
+# NewsFeed - Yangiliklar Web Sayti
 
 Yangiliklar sayti. Ushbu loyiha orqali O'zbekiston va Jahon yangiliklaridan habardor bo'lasiz(3 ta tilga tarjimalari bilan).
 
