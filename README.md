@@ -1,6 +1,6 @@
 # NewsFeed - Yangiliklar Web Sayti
 
-Yangiliklar sayti. Ushbu loyiha orqali O'zbekiston va Jahon yangiliklaridan habardor bo'lasiz(3 ta tilga tarjimalari bilan).
+Ushbu loyiha O'zbekistonda va Jahonda bo'layotgan voqealardan habardor qilish uchun tuzilgan.(Agar sizga Rus yoki Ingliz tili yaxshirq bo'lsa tarjimalar bo'limida bemalol yangiliklarni o'z tilingizga tarjima qila olasiz)
 
 ## Muhandis
 
