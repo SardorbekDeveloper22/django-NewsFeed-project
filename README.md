@@ -1,6 +1,6 @@
 # NewsFeed - Yangiliklar Web Sayti
 
-Ushbu loyiha O'zbekistonda va Jahonda bo'layotgan voqealardan habardor qilish uchun tuzilgan.(Agar sizga Rus yoki Ingliz tili yaxshirq bo'lsa tarjimalar bo'limida bemalol yangiliklarni o'z tilingizga tarjima qila olasiz)
+Ushbu loyiha O'zbekistonda va Jahonda bo'layotgan voqealardan habardor qilish uchun tuzilgan.(Agar sizga Rus yoki Ingliz tili yaxshirq bo'lsa tarjimalar bo'limida bemalol yangiliklarni o'z tilingizga tarjima qila olasiz).Yangilikga oid fikrlaringiz bo'lsa izohlarda qoldiring.
 
 ## Muhandis
 
