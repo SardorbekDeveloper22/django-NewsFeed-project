@@ -1,4 +1,4 @@
-# Goodreads Kloni
+# NewsFeed
 
 Yangiliklar sayti. Ushbu loyiha orqali O'zbekiston va Jahon yangiliklaridan habardor bo'lasiz(3 ta tilga tarjimalari bilan).
 
@@ -27,13 +27,6 @@ $ pip install -r requirements.txt
 
 - Python
 - Django Framework
-- Django rest framework
-- HTML/CSS/Bootstrap
+- HTML/CSS
 
-## Testlar
-
-Proyektda avtomatlashtirilgan testlar mavjud. Testlarni ishga tushirish:
-```bash
-$ python manage.py test
-```
 
