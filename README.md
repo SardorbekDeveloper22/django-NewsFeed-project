@@ -1,6 +1,6 @@
 # Goodreads Kloni
 
-Bu proyekt Yangiliklar sayti. Ushbu proyekt orqali O'zbekiston va Javon yangiliklaridan habardor bo'lasiz(3 ta tilga tarjimalari bilan).
+Yangiliklar sayti. Ushbu loyiha orqali O'zbekiston va Jahon yangiliklaridan habardor bo'lasiz(3 ta tilga tarjimalari bilan).
 
 ## Muhandis
 
